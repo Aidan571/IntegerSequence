@@ -39,6 +39,7 @@ public class ArraySequence implements IntegerSequence{
 
   public ArraySequence(IntegerSequence otherseq){
     currentIndex = 0;
+    otherseq.reset();
     data = new int[otherseq.length()];
     for(int i = 0; i < otherseq.length(); i++){
       data[i] = otherseq.next();
