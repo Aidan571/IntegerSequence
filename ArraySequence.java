@@ -36,4 +36,12 @@ public class ArraySequence implements IntegerSequence{
     else
     throw new NoSuchElementException("There is no next value.");
   }
+
+  public ArraySequence(IntegerSequence otherseq){
+    currentIndex = 0;
+    data = new int[otherseq.length()];
+    for(int i = 0; i < otherseq.length(); i++){
+      data[i] = otherseq.next();
+    }
+  }
 }
